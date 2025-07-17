@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SolarWanderer</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="style.css"> <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js",
+      "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.150.1/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+<div id="hud">
+  <div id="hudLeft">
+    <div class="hud-indicator-container">
+      <div class="hud-label">Warp</div>
+      <div id="speedIndicator"><div id="speedBar"></div></div>
+    </div>
+    <div class="hud-indicator-container">
+      <div class="hud-label">Energy</div>
+      <div id="fuelIndicator"><div id="fuelLevel"></div></div>
+    </div>
+  </div>
+  <div id="hudRight">
+    <div class="hud-info-item">
+      <span class="hud-label-small">Distance:</span>
+      <span id="distanceTracker" class="hud-value">0 AUs</span>
+    </div>
+    <div class="hud-info-item">
+      <span class="hud-label-small">Energy Collected:</span>
+      <span id="redStarCounter" class="hud-value">0</span>
+    </div>
+  </div>
+</div>
+
+  <div id="gameOver">
+    <div>Energy Depleted</div>
+    <p class="final-stat">Distance Traveled: <span id="finalDistance">0 AUs</span></p>
+    <p class="final-stat">Energy Collected: <span id="finalRedStars">0</span></p>
+    <p class="final-stat">Total Score: <span id="finalScore">0</span></p>
+    <button id="restartButton">Restart</button>
+  </div>
+  <div id="flash"></div>
+
+  <div id="startScreen">
+    <h1>Solar Explorer</h1>
+    <p>Fly through red stars to recharge your ship.</p>
+    <p>Control flight with your mouse and WASD keys.</p>
+    <p>Pause with Spacebar.</p>
+    <p id="startMessage">CLICK TO START</p>
+  </div>
+
+  <script type="module" src="main.js"></script> </body>
+</html>

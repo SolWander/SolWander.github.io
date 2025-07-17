@@ -1,0 +1,163 @@
+html, body { margin: 0; padding: 0; overflow: hidden; background: #000; }
+#hud {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  color: #fff;
+  font-family: sans-serif;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 25px;
+  justify-content: space-between;
+}
+#hudLeft {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: flex-end;
+}
+#hudRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-right: 15px;
+}
+.hud-info-item {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+.hud-label-small {
+    font-size: 16px;
+    color: rgb(131, 182, 147);
+    opacity: 0.7;
+}
+.hud-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(131, 182, 147);
+    opacity: 0.7;
+}
+
+#gameOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(178, 11, 11);
+  font-size: 48px;
+  font-family: sans-serif;
+  background: rgba(0,0,0,0.7);
+  visibility: hidden;
+  z-index: 20;
+}
+#gameOver button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 28px;
+  color: rgb(178, 11, 11);
+  background-color: transparent;
+  border: 2px solid rgb(178, 11, 11);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+#gameOver button:hover {
+  background-color: rgb(178, 11, 11);
+  color: black;
+  transform: scale(1.05);
+}
+#gameOver button:active {
+  transform: scale(0.98);
+}
+#gameOver .final-stat {
+  font-size: 28px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+#flash { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff; opacity: 0; transition: opacity 0.1s ease-out; z-index: 15; pointer-events: none; }
+#startScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(192, 126, 75);
+  font-family: sans-serif;
+  background: rgba(0,0,0,0.9);
+  z-index: 30;
+  text-align: center;
+}
+#startScreen h1 {
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+#startScreen p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+#startScreen #startMessage {
+  font-size: 36px;
+  margin-top: 40px;
+  cursor: pointer;
+  border: 2px solid rgb(192, 126, 75);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+#startScreen #startMessage:hover {
+  background-color: rgb(192, 126, 75);
+  color: black;
+}
+
+/* Styles for Speed and Fuel indicators */
+.hud-indicator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hud-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: rgb(131, 182, 147);
+    opacity: 0.7;
+}
+#speedIndicator, #fuelIndicator {
+  width: 30px;
+  height: 120px;
+  border: 2px solid rgb(131, 182, 147);
+  opacity: 0.7;
+  position: relative;
+  border-radius: 4px;
+}
+#speedBar {
+  width: 100%;
+  height: 0%;
+  background-color: rgb(131, 182, 147);
+  opacity: 0.35;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.1s ease-out;
+}
+#fuelLevel {
+  width: 100%;
+  background-color: red;
+  opacity: 0.35;
+  position: absolute;
+  bottom: 0;
+  transition: background-color 0.2s, height 0.2s ease-out;
+}
